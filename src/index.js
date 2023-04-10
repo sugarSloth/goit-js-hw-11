@@ -17,10 +17,9 @@ loadMoreBtnEl.addEventListener('click', loadMoreHandler);
 
 async function formSubmitHandler(event) {
   event.preventDefault();
-  fetchImages.pageRestart();
   galleryEl.innerHTML = '';
   loadMoreBtnEl.classList.add('is-hidden');
-
+  fetchImages.pageRestart();
   query = formEl.elements.searchQuery.value.trim();
 
   if (!query) {
